@@ -11,6 +11,10 @@ from collective.configviews import ConfigurableBaseView
 
 _ = MessageFactory('collective.galleriffic')
 
+myVocabularyView = SimpleVocabulary.fromItems((
+    (u"Simpel view", "display_mode_1"),
+        (u"icone view", "display_mode_2")))
+
 class IGallerifficConfiguration(interface.Interface):
     """Galleriffic options"""
     
@@ -62,6 +66,11 @@ class IGallerifficConfiguration(interface.Interface):
     defaultTransitionDuration = schema.Int(title=_(u"default transition duration"),
                                            description=_(u"If using the default transitions, specifies the duration of the transitions"),
                                            default=1000)
+class IGallerifficMode(interface.Interface):
+    """Galleriffic Choice view"""
+
+    contentChoiceView = schema.Choice(vocabulary=myVocabularyView,
+                                      title=u"View choice")
 
 class GallerifficView(ConfigurableBaseView):
     """Galleriffic configurable view"""
@@ -72,6 +81,7 @@ class GallerifficView(ConfigurableBaseView):
     display_mode_1 = ViewPageTemplateFile('display_mode_1.pt')
     display_mode_2 = ViewPageTemplateFile('display_mode_2.pt')
     display_mode_3 = ViewPageTemplateFile('display_mode_3.pt')
+    """display_mode = IGallerifficMode"""
     display_mode = 'display_mode_1'
 
     def __call__(self):
@@ -116,3 +126,6 @@ class GallerifficView(ConfigurableBaseView):
         current_language = portal_state.language()
         return current_language
 
+
+class GallerifficWithThumbnailsView(GallerifficView):
+    display_mode = 'display_mode_2'

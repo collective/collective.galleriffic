@@ -28,6 +28,15 @@
     permission="zope2.View"
     layer=".interfaces.IGallerifficLayer"
     />
+  <browser:page
+    name="galleriffic_with_thumbnails_view"
+    menu="plone_displayviews"
+    title="Galleriffic view with thumbnails"
+    for="*"
+    class=".view.GallerifficWithThumbnailsView"
+    permission="zope2.View"
+    layer=".interfaces.IGallerifficLayer"
+    />
   <browser:resourceDirectory
     name="galleriffic"
     directory="css"
