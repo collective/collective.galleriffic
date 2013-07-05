@@ -21,7 +21,7 @@
     <ul class="thumbs noscript">
         <li tal:repeat="photo gallery/photos">
             <a class="thumb" tal:attributes="name photo/id; href photo/url; title photo/title">
-              <img tal:attributes="src photo/thumb_url"/>
+              <img tal:attributes="src photo/thumb_url; alt photo/title"/>
             </a>
             <div class="caption" tal:content="photo/description">
             </div>

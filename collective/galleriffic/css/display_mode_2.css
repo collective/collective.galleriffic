@@ -36,8 +36,8 @@ div.loader {
 	background-image: url('loader.gif');
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 550px;
-	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+/*	width: 550px;*/
+/*	height: 502px; *//* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.slideshow {
 
@@ -108,7 +108,7 @@ a.thumb {
 	border: 1px solid #ccc;
 }
 ul.thumbs li.selected a.thumb {
-	background: #000;
+	background: #CCCCCC;
 }
 a.thumb:focus {
 	outline: none;
