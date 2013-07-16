@@ -34,7 +34,7 @@
 galleriffic_config['imageContainerSel'] = "#slideshow";
 galleriffic_config['controlsContainerSel'] = "#controls";
 $('div.content').css('display', 'block');
-$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+$('div.navigation').css({'float' : 'left'});
 </script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
