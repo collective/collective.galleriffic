@@ -1,7 +1,6 @@
 div.content {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
         display: none;
-       /* float: right;*/
         width: 100%; 
 }
 div.content a, div.navigation a {
@@ -21,9 +20,12 @@ div.controls a {
 div.ss-controls {
     float: left;
 }
-div.nav-controls {
+div.nav-control-next {
     float: right;
 }
+div.nav-control-prev{
+ float:left;   
+ }
 div.slideshow-container {
     position: relative;
     clear: both;
@@ -43,10 +45,6 @@ div.slideshow {
     
 }
 div.slideshow span.image-wrapper {
-    /*display: block;
-        position: absolute;
-        top: 0;
-        left: 0;*/
     width:400px;
     margin: 0 auto;
 }
@@ -64,7 +62,8 @@ div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.sli
 div.slideshow img {
     vertical-align: middle;
     margin: 0 auto;
-    width: 400px;
+    max-width: 100%;
+    height: auto;
 /*        border: 1px solid #ccc*/
 }
 div.download {
@@ -96,6 +95,7 @@ div.image-desc {
 div.navigation {
     /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
     border-top: 1px solid #CCCCCC;
+    width:100%;
 }
 ul.thumbs {
     clear: both;
@@ -114,24 +114,27 @@ a.thumb {
     border: 1px solid #ccc;
 }
 ul.thumbs li.selected a.thumb {
-background: #CCCCCC;
+    background: #CCCCCC;
 }
 a.thumb:focus {
     outline: none;
 }
 ul.thumbs img {
     border: none;
-        display: block;
+    display: block;
+    height:90px;
 }
 div.pagination {
     clear: both;
 }
 div.navigation div.top {
     margin-bottom: 12px;
-        height: 11px;
+    margin-top:6px;
+    height: 11px;
 }
 div.navigation div.bottom {
     margin-top: 12px;
+    width:100%;
 }
 div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
     display: block;
@@ -160,22 +163,23 @@ div.ss-controls {
     margin-top: 9px;
 }
 div.nav-controls{
-left: 55px;
+/*left: 55px;*/
+text-align:center;
 position: relative;
-top: 9px;
-     z-index:100;
+top: 25px;
+z-index:1;
 }
 
 div.nav-controls .prev{
 background: url("step_backward.png") no-repeat scroll 0 0;
-color:transparent;
-      margin-right: 82px;
-position: relative;
-right: 195px;
+      color:transparent;
+      margin-right: 10%;
+      margin-left: -26%;
 }
 div.nav-controls .next{
 background: url("step_forward.png") no-repeat scroll 0 0;
 color:transparent;
+margin-left:25%;
 
 }
 .ss-controls .pause{
@@ -184,13 +188,16 @@ color:transparent;
 position:relative;
 /*left:-38px;*/
 top:19px;
+z-index:11;
 }
 .ss-controls .play{
 background: url("play.png") no-repeat scroll 0 0;
 color:transparent;
 position:relative;
-/*left:-38px;*/
-top:19px;
+top:16px;
+margin-left: 330%;
+margin-left: 330%;
+z-index:10;
 }
 div.slideshow a.advance-link {
 line-height: 354px;
@@ -209,7 +216,7 @@ div.loader{
 /*width:105% !important;*/
     }
 div.controls {
-width: 363px;
+width: 100%;
 margin: 0 auto;
 }
 div.controls a {
