@@ -172,19 +172,19 @@ z-index:1;
 
 div.nav-controls .prev{
 background: url("step_backward.png") no-repeat scroll 0 0;
-      color:transparent;
+      color:transparent !important;
       margin-right: 10%;
       margin-left: -26%;
 }
 div.nav-controls .next{
 background: url("step_forward.png") no-repeat scroll 0 0;
-color:transparent;
+color:transparent !important;
 margin-left:25%;
 
 }
 .ss-controls .pause{
 background: url("pause.png") no-repeat scroll 0 0;
-color:transparent;
+color:transparent !important;
 position:relative;
 /*left:-38px;*/
 top:19px;
@@ -192,7 +192,7 @@ z-index:11;
 }
 .ss-controls .play{
 background: url("play.png") no-repeat scroll 0 0;
-color:transparent;
+color:transparent !important;
 position:relative;
 top:16px;
 margin-left: 330%;
@@ -225,5 +225,12 @@ div.controls a {
 #galleriffic a img{
 margin-left:0;
 margin-right:0;
+}
+#gallery a.prev:link, 
+#gallery a.play:link,
+#gallery a.pause:link,
+#gallery a.next:link{
+    border-bottom: 0em solid #CCCCCC !important;
+    color: transparent !important;
 }
 */-----------*/
