@@ -18,7 +18,7 @@ div.controls a {
     padding: 5px;
 }
 div.ss-controls {
-    float: left;
+    /*float: left;*/
 }
 div.nav-control-next {
     float: right;
@@ -159,7 +159,7 @@ div.pagination span.ellipsis {
 }
 /*________________*/
 div.ss-controls {
-    margin-left:186px;
+    /*margin-left:186px;*/
     margin-top: 9px;
 }
 div.nav-controls{
@@ -168,6 +168,7 @@ text-align:center;
 position: relative;
 top: 25px;
 z-index:1;
+margin-left: 23%;
 }
 
 div.nav-controls .prev{
@@ -187,16 +188,16 @@ background: url("pause.png") no-repeat scroll 0 0;
 color:transparent !important;
 position:relative;
 /*left:-38px;*/
-top:19px;
+top:42px;
+margin-left: 49%;
 z-index:11;
 }
 .ss-controls .play{
 background: url("play.png") no-repeat scroll 0 0;
 color:transparent !important;
 position:relative;
-top:16px;
-margin-left: 330%;
-margin-left: 330%;
+top:42px;
+margin-left: 49%;
 z-index:10;
 }
 div.slideshow a.advance-link {
@@ -226,11 +227,10 @@ div.controls a {
 margin-left:0;
 margin-right:0;
 }
-#gallery a.prev:link, 
-#gallery a.play:link,
-#gallery a.pause:link,
-#gallery a.next:link{
-    border-bottom: 0em solid #CCCCCC !important;
+#galleriffic a:hover {
     color: transparent !important;
+}
+#galleriffic a:link {
+border-bottom: 0 solid #CCCCCC;
 }
 */-----------*/
