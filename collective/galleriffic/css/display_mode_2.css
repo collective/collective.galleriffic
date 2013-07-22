@@ -29,7 +29,7 @@ div.nav-control-prev{
 div.slideshow-container {
     position: relative;
     clear: both;
-    height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+    height: 435px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.loader {
     position: absolute;
@@ -63,6 +63,7 @@ div.slideshow img {
     vertical-align: middle;
     margin: 0 auto;
     max-width: 100%;
+    max-height:400px;
     height: auto;
 /*        border: 1px solid #ccc*/
 }
@@ -105,7 +106,7 @@ ul.thumbs {
 ul.thumbs li {
     float: left;
     padding: 0;
-    margin: 5px 10px 5px 0;
+    margin: 5px 8px 5px 0;
     list-style: none;
 }
 a.thumb {
@@ -211,6 +212,7 @@ padding: 7px 3px 5px !important;
     /* border: 1px solid #CCCCCC;*/
     margin-top:0px;
     padding-bottom:25px;
+    margin-bottom:20px;
 }
 div.slideshow a.advance-link,
 div.loader{
