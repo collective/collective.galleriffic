@@ -4,7 +4,7 @@ Changelog
 1.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix width image in IE9 & IE10.
 
 
 1.1.4 (2013-07-22)
