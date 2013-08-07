@@ -67,6 +67,7 @@ div.slideshow img {
     max-width: 98%;
 /*    max-height:400px;*/
     height: auto;
+    width: auto;
 /*        border: 1px solid #ccc*/
 }
 div.download {

@@ -1,10 +1,16 @@
 Changelog
 =========
 
-1.1.5 (unreleased)
+1.1.6 (unreleased)
 ------------------
 
 - Nothing changed yet.
+
+
+1.1.5 (2013-07-25)
+------------------
+
+- fix width image in IE9 & IE10.
 
 
 1.1.4 (2013-07-22)
