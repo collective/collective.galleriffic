@@ -29,7 +29,7 @@ div.nav-control-prev{
 div.slideshow-container {
     position: relative;
     clear: both;
-    height: 435px; /* This should be set to be at least the height of the largest image in the slideshow */
+    max-height: 435px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.loader {
     position: absolute;
@@ -55,6 +55,8 @@ div.slideshow a.advance-link {
     margin: 0 auto;
     line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
     text-align: center;
+    position:relative;
+    z-index:1;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
     text-decoration: none;
@@ -62,8 +64,8 @@ div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.sli
 div.slideshow img {
     vertical-align: middle;
     margin: 0 auto;
-    max-width: 100%;
-    max-height:400px;
+    max-width: 98%;
+/*    max-height:400px;*/
     height: auto;
 /*        border: 1px solid #ccc*/
 }
@@ -97,6 +99,8 @@ div.navigation {
     /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
     border-top: 1px solid #CCCCCC;
     width:100%;
+    position:relative;
+    z-index:10;
 }
 ul.thumbs {
     clear: both;
@@ -123,7 +127,8 @@ a.thumb:focus {
 ul.thumbs img {
     border: none;
     display: block;
-    height:90px;
+    /*height:90px;*/
+    margin-bottom: 0 !important;
 }
 div.pagination {
     clear: both;
@@ -202,8 +207,8 @@ margin-left: 49%;
 z-index:10;
 }
 div.slideshow a.advance-link {
-line-height: 354px;
-text-aligne:right;
+/*line-height: 354px;*/
+/*text-aligne:right;*/
 }
 div.pagination a, div.pagination span.current, div.pagination span.ellipsis{
 padding: 7px 3px 5px !important;
@@ -228,11 +233,99 @@ div.controls a {
 #galleriffic a img{
 margin-left:0;
 margin-right:0;
+margin-bottom:45px;
 }
 #galleriffic a:hover {
-    color: transparent !important;
+    color: #000 !important;
 }
-#galleriffic a:link {
+#galleriffic .nav-controls a:hover,
+#galleriffic .ss-controls a:hover {
+   color: transparent !important;
+}
+#galleriffic a:link{
 border-bottom: 0 solid #CCCCCC;
+}
+#galleriffic .nav-controls a:focus,
+#galleriffic .ss-controls a:focus{
+border: 1px dotted #CCCCCC;
+}
+#galleriffic ul.thumbs a:link,
+#galleriffic div.pagination a:link {
+border-bottom: 1px solid #CCCCCC;
+}
+#galleriffic ul.thumbs a:hover,
+#galleriffic div.pagination a:hover,
+#galleriffic ul.thumbs a:focus,
+#galleriffic div.pagination a:focus{
+border: 1px solid #000000;
+}
+@media (min-width: 1200px) { 
+    ul.thumbs img {
+        height:90px;
+    }
+    div.slideshow img {
+        max-width:97%;
+        max-height:400px;
+    }
+}
+@media (min-width:980px) and (max-width:1199px){
+    ul.thumbs img {
+        height:90px;
+    }
+    div.slideshow img {
+        max-width:97%;
+        max-height:400px;
+    }
+}
+@media(max-width: 1024px){
+
+    ul.thumbs img {
+        height:65px;
+    }
+
+    div.slideshow img {
+       max-width:97%;
+       max-height:400px;
+    }
+    div.slideshow a.advance-link {
+       /* line-height: 502px;*/
+    }
+        
+ }
+@media(max-width: 767px){
+    ul{}
+
+    ul.thumbs img {
+         height: 45px;
+    }
+    div.slideshow img {
+        max-width: 97%;
+        max-height:275px;
+    }
+    div.slideshow-container {
+        max-height:285px; 
+    }
+    div.slideshow a.advance-link {
+        line-height: 300px;
+    }
+    div.pagination a, div.pagination span.current, div.pagination span.ellipsis{
+      padding: 5px 1px 3px !important;
+     }
+
+}
+@media (max-width: 480px) {
+    ul.thumbs img {
+          height: 25px;
+    }
+    div.slideshow img {
+        max-width: 97%;
+        max-height:250px;
+    }
+    div.slideshow-container {
+        max-height:255px;
+    }
+    div.slideshow a.advance-link {
+       line-height: 210px;
+    }
 }
 */-----------*/
